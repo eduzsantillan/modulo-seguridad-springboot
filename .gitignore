@@ -7,6 +7,7 @@ target/
 .mvn/
 mvnw.cmd
 mvnw
+
 ### STS ###
 .apt_generated
 .classpath
@@ -34,3 +35,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+##Se comenta el application properties
+src/main/resources/application.properties

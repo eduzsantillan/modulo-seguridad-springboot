@@ -8,11 +8,11 @@
         <version>2.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>pe.isil</groupId>
+    <artifactId>modulo-seguridad</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>modulo-seguridad</name>
+    <description>Modulo</description>
 
     <properties>
         <java.version>15</java.version>
