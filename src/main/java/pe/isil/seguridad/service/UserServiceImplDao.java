@@ -15,11 +15,6 @@ public class UserServiceImplDao implements UserService{
 
     @Override
     public List<User> getUsers() {
-       try{
-           return userDao.getUsers();
-       }catch (Exception e) {
-           e.printStackTrace();
-           return null;
-       }
+       return null;
     }
 }

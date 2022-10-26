@@ -14,32 +14,6 @@ import java.util.List;
 public class UserDao {
 
 
-    public List<User> getUsers() throws Exception {
 
-        Class.forName("com.mysql.jdbc.Driver");
-
-        Connection connection = null;
-        connection= DriverManager.getConnection("jdbc:mysql://localhost:3306/moduloseg","root","budakar01");
-
-        Statement st = connection.createStatement();
-
-        ResultSet rs = st.executeQuery("select name,lastname,mail,birthdate from users");
-        List<User> users = new ArrayList<>();
-
-        int count= 1;
-        while(rs.next()){
-            User user = new User(
-                    count,
-                    rs.getString("name"),
-                    rs.getString("lastname"),
-                    rs.getString("mail"),
-                    "",
-                    LocalDate.now()
-            );
-            count++;
-            users.add(user);
-        }
-        return users;
-    }
 
 }
