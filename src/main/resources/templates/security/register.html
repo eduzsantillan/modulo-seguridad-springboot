@@ -9,12 +9,13 @@
 <body>
 <br>
 <div class="container">
-    <form>
+
+    <form th:action="@{/adduserauth}" method="post" th:object="${authuser}" >
 
         <!-- Email input -->
         <div class="form-outline mb-4">
             <label class="form-label" for="name">Nombres:</label>
-            <input type="email" id="name" name ="name" class="form-control" />
+            <input type="text" id="name" name ="name" class="form-control" />
         </div>
 
         <!-- Email input -->
@@ -36,11 +37,8 @@
         </div>
 
 
-
         <!-- Submit button -->
-        <button type="button" class="btn btn-primary btn-block mb-4">Registrar</button>
-
-
+        <button type="submit" class="btn btn-primary btn-block mb-4">Registrar</button>
     </form>
 </div>
 
