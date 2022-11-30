@@ -1,6 +1,5 @@
 package pe.isil.seguridad.auth;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,10 +39,10 @@ public class UserSecurityController {
                 userSecurity.getPassword());
         if(user==null){
             model.addAttribute("resp","Credenciales incorrectas o usuario no existe");
+            return "ValidationResponse";
         }else{
-            model.addAttribute("resp","Welcome ".concat(user.getName()));
+            return "redirect:/user/";
         }
-        return "index";
     }
 
 

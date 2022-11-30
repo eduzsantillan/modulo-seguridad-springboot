@@ -5,7 +5,9 @@ import lombok.Data;
 import javax.persistence.*;
 
 @Entity
-@Table(name="tbl_user")
+@Table(name="tbl_user", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "email", name="unique_email_user")
+})
 @Data
 public class User {
 
@@ -17,6 +19,7 @@ public class User {
 
     private String lastname;
 
+    @Column(name="email", length = 200)
     private String email;
 
     private String urlPhoto;

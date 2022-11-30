@@ -4,14 +4,16 @@ import java.util.List;
 
 public interface UserService {
 
-    void addUser(User user);
+    UserDTO addUser(User user);
 
     User findUserByEmail(String email);
 
     List<User> findAll();
 
-    void updateUser(User user,Long id);
+    UserDTO updateUser(User user,Long id);
 
     void deleteUser(Long id);
+
+    User findUserById(Long id);
 
 }
