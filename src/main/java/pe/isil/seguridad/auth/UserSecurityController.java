@@ -36,16 +36,13 @@ public class UserSecurityController {
 
     @PostMapping("/login")
     public String login(@ModelAttribute(name="authuser") UserSecurity userSecurity,Model model){
-
         UserSecurity user = userSecurityService.findUserSecurity(userSecurity.getEmail(),
                 userSecurity.getPassword());
-
         if(user==null){
             model.addAttribute("resp","Credenciales incorrectas o usuario no existe");
         }else{
             model.addAttribute("resp","Welcome ".concat(user.getName()));
         }
-
         return "index";
     }
 
