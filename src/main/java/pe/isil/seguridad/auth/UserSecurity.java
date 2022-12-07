@@ -16,6 +16,8 @@ public class UserSecurity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @Column(name="email", length = 100)
     private String email;
     private String password;
     private Date createdAt;
